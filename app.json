@@ -1,0 +1,36 @@
+{
+    "name": "Forward bot",
+    "description": "Group A <-> Group B",
+    "stack": "heroku-20",
+    "env": {
+        "string_session": {
+            "description": "String session"
+        },
+        "api_id": {
+            "description": "Get your own Telegram API key from https://my.telegram.org/apps"
+        },
+        "api_hash": {
+            "description": "Get your own Telegram API key from https://my.telegram.org/apps"
+        },
+        "password": {
+            "description": "2FA password (if any)",
+            "required": false
+        },
+        "group_a": {
+            "description": "ID of group A"
+        },
+        "group_b": {
+            "description": "ID of group B"
+        },
+        "log_level": {
+            "description": "Logging level to use for Heroku logs.",
+            "value": "NOTSET",
+            "required": false
+        }
+    },
+    "formation": {
+        "worker": {
+            "quantity": 1
+        }
+    }
+}
